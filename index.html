@@ -1,8 +1,15 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Adlai 2016</title>
-    </head>
-    <body>
-        <h1>Hello, world</h1>
-    </body>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+ 
+<p>Input something in the input box:</p>
+<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+<h1>Hello {{name}}</h1>
+
+</div>
+
+</body>
 </html>
