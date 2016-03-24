@@ -1,0 +1,43 @@
+Yo, since we're working 12 hours apart and our workflow doesn't use any git commit messages, I figured this would be a helpful record.
+
+Just read this, then add your own to the bottom when you make changes.
+
+/***Bharath 3/12***/
+THINGS I DID
+Added in more sections (schedule, tab policy, pairings, etc.) and included information on them
+Floated columns for schedule
+
+
+/***Andrew 3/13 ***/
+THINGS I DID
+Changed the schedule to look a little better, and also to use Bootstrap stuff to be mobile friendly.
+Made it two circle buttons up top for contact and schedule
+Moved schedule above food (more important)
+**Made it so the file that our grayscale.less builds to is the one used by index.html
+Put food in with schedule.
+Used tables for a bunch of stuff which lookes neater.
+Also changed the font stack. Everything is in Lato, a Google Font. I brought in these weights:
+    300, which is narrow, for headings
+    500, normal, for most things
+    900, a heavier bold
+    
+/***Bharath 3/14 ***/
+THINGS I DID
+Added in PDFs for the tab policy and tournament info
+Changed the content of the contact section slightly to remove emails in plaintext
+
+/***Bharath and Andrew 3/15 ***/
+Did a bunch of stuff. Should update later
+
+/***Bharath 3/19 ***/
+Updated phone numbers
+
+SUGGESTIONS
+We should move all the pairings/motions to a diff page. I started it off with an empty page
+The idea is basic tournament info on page one, then all the technical stuff in a slightly less sexy (but more straightforward) other page
+This will clean up desing, make both easier to access, and also make it so all the js we'll need doesn't slow down the home page.
+
+THINGS TO DO:
+Work on MIT tab functionality
+Work on motions functionality
+Work on housing functionality

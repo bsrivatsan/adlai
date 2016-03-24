@@ -1,15 +1,395 @@
 <!DOCTYPE html>
-<html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<body>
+<html lang="en">
 
-<div ng-app="">
- 
-<p>Input something in the input box:</p>
-<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-<h1>Hello {{name}}</h1>
+<head>
 
-</div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Princeton's Adlai Tournament, 2016">
+    <meta name="author" content="Bharath Srivatsan and Andrew Hartnett">
+
+    <title>Adlai 2016</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="less/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <span class="light">Princeton</span> Adlai <span class="light">2016</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#schedule">Schedule</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#map-section">Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#housing">Housing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#tabpolicy">Tab</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li id="pairings">
+                        <a class="page-scroll" href="pairings.html">Pairings</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Adlai 2016</h1>
+                        <p class="intro-text">The Adlai Stevenson Memorial APDA Tournament<br />
+                        April 1-2, 2016<br />
+                        Princeton University<br />
+                        <a href="http://goo.gl/forms/8eO1Xnpc6Y">Register Here!</a></a></p>
+                        <a href="#schedule" class="btn btn-circle page-scroll">
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        </a>
+                        <a href="#map" class="btn btn-circle page-scroll" style="padding-left:12px;"><!--Gets custom padding because it centers differently -->
+                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                        </a>
+                        <a href="#contact" class="btn btn-circle page-scroll">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="pairings.html" class="btn btn-default btn-lg">Pairings and Motions</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Schedule</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table class="schedule">
+                                <tr>
+                                    <th colspan="2">Friday</th>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">1:30
+                                        <td>Registration Opens</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">3:30</td>
+                                    <td>Registration Closes</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">4:30</td>
+                                    <td class="sched-round">Round 1</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">5:30</td>
+                                    <td>APDA meeting</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">6:30</td>
+                                    <td class="sched-round">Round 2</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">7:30</td>
+                                    <td>Dinner</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">8:30</td>
+                                    <td class="sched-round">Round 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">9:45</td>
+                                    <td>Housing/Elections</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <table class="schedule">
+                                <tr>
+                                    <th colspan="2">Saturday</th>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">8:45
+                                        <td>Breakfast</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">9:30</td>
+                                    <td class="sched-round">Round 4</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">11:00</td>
+                                    <td class="sched-round">Round 5</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">1:30</td>
+                                    <td class="sched-round">Octofinals
+                                        <br /> Novice Semifinals</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">3:00</td>
+                                    <td class="sched-round">Quarterfinals
+                                        <br /> Novice Finals</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">4:30</td>
+                                    <td class="sched-round">Semifinals</td>
+                                </tr>
+                                <tr>
+                                    <td class="sched-time">6:00</td>
+                                    <td class="sched-round">Finals</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="info">
+                            <tr>
+                                <th colspan="2">Food</th>
+                            </tr>
+                            <tr>
+                                <td class="key">Friday Dinner</td>
+                                <td class="value">TBD</td>
+                            </tr>
+                            <tr>
+                                <td class="key">Saturday Breakfast</td>
+                                <td class="value">TBD</td>
+                            </tr>
+                            <tr>
+                                <td class="key">Saturday Lunch</td>
+                                <td class="value">Not Provided. Nearby PDP favorites include Mamoun's, Hoagie Haven, and Frist Center Gallery. Find other affordable options nearby on <a href="http://www.yelp.com/search?find_desc=lunch&find_loc=1+whig+hall&ns=1#start=0&attrs=RestaurantsPriceRange2.1,RestaurantsPriceRange2.2">Yelp</a>.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map-section" class="content-section text-center">
+        <div class="map-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Campus Map</h2>
+                            Directions from McCosh 50 to
+                            <select id="end">
+                              <option role=separator>Choose Destination</option>
+                              <option value="ChIJU_klQ8Hmw4kRh3fUkNHtEG4">East Pyne</option>
+                              <option value="ChIJJWYzt8Tmw4kR-i38b3utf5w">Fine Hall</option>
+                              <option value="ChIJb02Je8Tmw4kRAunDk4kwKNU">Frist Campus Center</option>
+                              <option value="ChIJqf3bMtvmw4kRmBRdCQ1TDPc">Jadwin Hall</option>
+                              <option value="ChIJh4EppcTmw4kRZZP5CJ7cwxw">Lewis Library</option>
+                              <option value="ChIJ5WuNyMTmw4kRg4nQXOQowe0">McDonnell</option> 
+                              <option value="ChIJ8QqhCsPmw4kRa7KXqitgSLY">Robertson</option>
+                              <option value="ChIJXUuEHsPmw4kRDSBV_BoQ-B8">Wallace</option>
+                              <option value="ChIJL_z2dcTmw4kR3zP1ihhhRUY">Woolworth</option>
+                              <option disabled role=separator>-----------------</option>
+                              <option value="ChIJDzt2B-jmw4kRHeQVloCO1z4">Hoagie Haven</option>
+                              <option value="ChIJ04smqsHmw4kRs9Yz0HHzKrQ">Mamoun's Falafel</option>
+                              <option value="ChIJj-qpLc_mw4kR1cpg2WlOpng">Lot 23</option>
+                            </select>
+                        <div id="directions-duration" style="font-size:150%; color:#ff9000"></div>
+                        <div id="map"></div>
+                        <br />
+                        <button id='directionsButton' class="btn btn-default btn-lg">Show Directions</button>
+                        <div id="directionsPanel" style='display:none; background-color:#ffffff'></div>
+                        <p><br />GA is located in <span class="emphasis">McCosh 50</span>. Tab is located in <span class="emphasis">McCosh 48</span>.</p>
+                        <p><a href="https://m.princeton.edu/map/">Interactive Princeton Map</a> <br />
+                           <a href="img/adlaimap.png">Labeled Building Map</a></p>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Housing Section -->
+    <section id="housing" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Tournament Housing</h2>
+                    <p>Details about room arrangements will be relased closer to the tournament</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Policy Section -->
+    <section id="tabpolicy" class="content-section text-center">
+        <div class="tab-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Tab Policy</h2>
+                        <p>Adlai is a motions tournament.</p>
+                        <p>Please Contact the TDs with any questions  prior to the start of Round 1.</p>
+                        <a href="files/Tournament Info.pdf" class="btn btn-default btn-lg">Tab Policy</a> 
+                        &nbsp &nbsp
+                        <a href="files/Adlai Stevenson Invitational Tab Policy.pdf" class="btn btn-default btn-lg">Tournament Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact Us</h2>
+                    <p> For any immediate tournament-related questions, contact the TDs:</p>
+                    <table class="info">
+                        <tr>
+                            <th colspan="2">
+                                Tournament Directors
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="key">Bharath</td>
+                            <td class="value">
+                                <a href="mailto:bharaths@princeton.edu">bharaths@princeton.edu</a> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key">Jaewon</td>
+                            <td class="value">
+                                <a href="mailto:jaewonk@princeton.edu">jaewonk@princeton.edu</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key">Miranda</td>
+                            <td class="value">
+                                <a href="mailto:mirandar@princeton.edu">mirandar@princeton.edu</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>For any registration-related issues, call us at:</p>
+                    <table class="info" id="officers">
+                        <tr>
+                            <th colspan="2">
+                                Registration Points of Contact
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="key">Registration over <br>the Phone</td>
+                            <td class="value">
+                                Bharath: (609) 955 0744 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key">Problems with Registration</td>
+                            <td class="value">
+                                Ani: (216) 308 4469
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="key">Miscellaneous Questions</td>
+                            <td class="value">
+                                Nathan: (914) 588 0957
+                            </td>
+                        </tr>
+                    </table>
+                    <p></p>
+                    <p> For any questions on finances or team policies, contact the Officers:</p>
+                    <table class="info" id="officers">
+                        <tr>
+                            <th colspan="2">
+                                PDP Officers
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="key">President</td>
+                            <td class="value"><a href="mailto:nraab@princeton.edu">nraab@princeton.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td class="key">Administrative VP</td>
+                            <td class="value"><a href="mailto:smatthews@princeton.edu">smatthews@princeton.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td class="key">Financial VP</td>
+                            <td class="value"><a href="mailto:cliziewski@princeton.edu">cliziewski@princeton.edu</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Princeton Debate Panel 2016.
+            <br />Designed by Bharath Srivatsan '18 and Andrew Hartnett '18</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+    
+    <!-- Gmaps -->
+    <script src="js/directions.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqL7-zhF84K9XXfOuIRkSnmB_jw585e4Y&callback=initMap"
+    async defer></script>
 
 </body>
+
 </html>

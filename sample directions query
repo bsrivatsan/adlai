@@ -1,0 +1,9 @@
+/* mccosh to fc */
+{
+  origin: {lat: 40.348395, lng:-74.656116},
+  destination: ChIJ-dnoxsLmw4kR2ICAhHJFfpk,
+  provideRouteAlternatives: false,
+  travelMode: google.maps.TravelMode.WALKING,
+}
+the key
+AIzaSyBqL7-zhF84K9XXfOuIRkSnmB_jw585e4Y
