@@ -71,20 +71,59 @@
     <!-- Motion Check JS -->
     <script type"text/javascript">
         var ckMotions = function() {
+            var totalTime = 1200;
             var date = new Date();
             var motion = new Date(2016, 03, 30, 23, 12, 00, 00);
-            console.log(date);
-            console.log(motion);
+//            console.log(date);
+//            console.log(motion);
             if (motion <= date) {
                 location.reload();
             }
             else {
-                $("#motion_info").animate({
-                    'font-size':'120%'
-                }, 250, function() {
-                    $("#motion_info").animate({
-                        'font-size':'100%'
-                    }, 250, function(){});
+                // change to hourglass in button
+                $("#motion_check")
+                    .html("<div id='motion_check_content'><span class='glyphicon glyphicon-hourglass' aria-hidden='true'></span></div>");
+                //animate hourglass
+                $("#motion_check_content")
+                    .delay(500)
+                    .queue(function(next) {
+                        $(this).css({
+                            //for firefox
+                            "-moz-animation-name":"rotatebox",
+                            "-moz-animation-duration":"0.8s",
+                            "-moz-animation-iteration-count":"1",
+                                "-moz-animation-fill-mode":"forwards",
+
+                            //for safari & chrome
+                            "-webkit-animation-name":"rotatebox",
+                            "-webkit-animation-duration":"0.8s",
+                            "-webkit-animation-iteration-count":"1",
+                            "-webkit-animation-fill-mode" : "forwards",
+                        });
+                        next();  
+                    });
+                // restore button
+                $("#motion_check")
+                    .delay(totalTime)
+                    .queue(function(next) {
+                        $(this).html("Check for Motion");
+                        next();
+                    });
+                
+                
+                // animate pulse in info heading
+                // NOTE THAT THIS TIME IS CONCURRENT WITH ABOVE
+                $("#motion_info")
+                    .delay(totalTime)
+                    .animate({
+                        'font-size':'120%'
+                        }, 
+                        250,
+                        function() {
+                            $("#motion_info").animate({
+                                'font-size':'100%'
+                            }, 
+                            250, function(){});
                 });
             }
         }

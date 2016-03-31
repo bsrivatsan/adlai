@@ -423,3 +423,22 @@ option {
   color: #DDD;
   margin: 0;
 }
+/* animation or rotation */
+@-moz-keyframes rotatebox {
+  /*--for firefox--*/
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes rotatebox {
+  /*--for webkit--*/
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
