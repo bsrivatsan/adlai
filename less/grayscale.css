@@ -439,6 +439,9 @@ option {
 .announcement small {
   color: white;
 }
+tr.done {
+  color: #666666;
+}
 /* animation or rotation */
 @-moz-keyframes rotatebox {
   /*--for firefox--*/
