@@ -9,7 +9,7 @@
     <meta name="description" content="Princeton's Adlai Tournament, 2016">
     <meta name="author" content="Bharath Srivatsan and Andrew Hartnett">
 
-    <title>Adlai 2016: Pairings</title>
+    <title>Adlai 2016: Rounds</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,13 +36,23 @@
                             <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                         </a>
         <div class="row" id="motion_info">
-            <h1>Tournament has not started</h1>
+            <h1>Reg opens at 1:30</h1>
         </div>
         <div class="row" id="motion_motion">
+            <!--<h1>Info</h1>
+            <p>
+            
+            </p>
+            <h1>Motion</h1>
+            <p class="motion-text">
+            
+            </p>-->
             <a id="motion_check" onclick="ckMotions()" class="btn btn-default btn-lg">Check for Motion</a>
         </div>
         <div class="row" id="motion_pairings">
-            <a id="motion_check" class="btn btn-default btn-lg">Pairings</a>
+            <a href="http://princeton.mit-tab.com/" id="motion_check" class="btn btn-default btn-lg" target="_blank">
+                Pairings
+            </a>
         </div>
     </div>
     <!-- Footer -->
@@ -71,9 +81,12 @@
     <!-- Motion Check JS -->
     <script type"text/javascript">
         var ckMotions = function() {
+            //!!!!!!
+            var nextHour = 16;
+            var nextMin = 30;
             var totalTime = 1200;
             var date = new Date();
-            var motion = new Date(2016, 03, 30, 23, 12, 00, 00);
+            var motion = new Date(2016, 03, 30, nextHour, nextMin, 00, 00);
 //            console.log(date);
 //            console.log(motion);
             if (motion <= date) {

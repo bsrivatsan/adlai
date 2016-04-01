@@ -151,6 +151,7 @@ a {
     width: 100%;
     height: auto;
     padding: 100px 0;
+    padding-top:3em;
     text-align: center;
     color: white;
     background: url(../img/whig_front.jpg) no-repeat bottom center scroll;
@@ -162,11 +163,12 @@ a {
     .intro-body {
         display: table-cell;
         vertical-align: middle;
+        padding-top:80px;
         .brand-heading {
             font-size: 40px;
         }
         .intro-text {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
     @media(min-width:768px) {
@@ -177,7 +179,7 @@ a {
                 font-size: 100px;
             }
             .intro-text {
-                font-size: 26px;
+                font-size: 15x;
             }
         }
     }
@@ -465,6 +467,21 @@ option {
         font-size:1.5em;
         color:#DDD;
         margin:0;
+    }
+}
+
+.announcement {
+    color:lighten(@primary, 15%);
+    font-weight:700;
+    letter-spacing: 1px;
+    font-size: 3em;
+    border-top: 1px solid @primary;
+    border-bottom: 1px solid @primary;
+    &.urgent {
+        color:lighten(@urgent, 10%);
+    }
+    small {
+        color:white;
     }
 }
 
