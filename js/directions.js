@@ -1,5 +1,5 @@
 function initMap() {
-  MCCOSH = new google.maps.LatLng(40.348395, -74.656116);
+  MCDONNELL = new google.maps.LatLng(40.345342, -74.652485);
   var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer({ polylineOptions: { strokeColor: "#ff0000" } });
   
@@ -8,7 +8,7 @@ function initMap() {
         zoom: 16,
 
         // The latitude and longitude to center the map (always required)
-        center: MCCOSH,
+        center: MCDONNELL,
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
@@ -53,7 +53,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   geocoder.geocode({'placeId': place_id}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       directionsService.route({
-        origin: MCCOSH,
+        origin: MCDONNELL,
         destination: results[0].geometry.location,
         travelMode: google.maps.TravelMode.WALKING
       }, function(response, status) {
